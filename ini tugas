@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <conio.h>
+
+main()
+{
+    int a[2][5]={4,5,8,1,2,3,11,23,10,13}, pilih, i=0, j=0, x=3, k, ck, m, l, p;
+    printf("Harika Dayu S\n");
+    printf("314.3111.033\n");
+    printf("Manajemen Informatika\n\n");
+    printf("Diketahui Larik a[2][5]={4,5,8,1,2,3,11,23,10,13}\n");
+    printf("Pilih Eksekusi :\n");
+    printf("1. Mencari nilai x=3\n");
+    printf("2. Mengurutkan larik\n");
+    printf("Pilih : "); scanf("%d", &pilih);
+    switch (pilih)
+        case 1:
+            for(i;i<2;i++)
+            {
+                for(j;j<5;j++)
+                {
+                    if(a[i][j]==x)
+                        printf("nilai X berada pada larik a[%d][%d]\n\n",i,j); break;
+                }
+            }
+        case 2:
+            for(k=0;k<2*5-1;k++)
+            {
+                m=a[i/5][i%5];
+                ck=k;
+                for(p=1;p<2*5-i;p++)
+                    {
+                        l=a[(k+p)/5][(k+p)%5];
+                        if(m>l)
+                            {
+                                m=l;
+                                ck=k+p;
+                            }
+                        }
+                    a[ck/5][ck%5]=a[k/5][k%5];
+                    a[k/5][k%5]=m;
+                    }
+            printf("Setelah diurutkan :");
+            for(k=0;k<=1;k++)
+            for(p=0;p<5;p++)
+            printf("%d %d", k, p);
+getch();
+}
